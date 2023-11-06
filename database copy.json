@@ -1,0 +1,12 @@
+{
+  "defaultEnv": "db_migration",
+  "db_migration": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "postgres",
+    "user": "root",
+    "password": "root128",
+    "driver": "pg"
+  },
+  "sql-file": true
+}
