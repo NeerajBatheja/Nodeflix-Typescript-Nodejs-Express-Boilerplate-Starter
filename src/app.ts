@@ -2,7 +2,6 @@ import "reflect-metadata";
 import { dependencyLocator } from "./di-container";
 import express from "express";
 import bodyParser from "body-parser";
-import apiRoutes from "./routes/apiRoutes";
 import { bootstrap } from "./bootstrap";
 import fs from "fs";
 import path from "path";
