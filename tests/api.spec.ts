@@ -1,7 +1,13 @@
+import path from 'path';
 import request from 'supertest'
-import app from '../src/app'
+import app, { startBooting } from '../src/app' 
 
-describe('/api/protected-route', () => {
+beforeAll(async ()=>{
+
+  await startBooting()
+})
+
+describe('/api/protected-route',  function () {
   it('should return 401 when not authenticated', async () => {
     const response = await request(app).get('/api/protected-route')
     expect(response.status).toBe(401)

@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 const logger = dependencyLocator.getLoggerService();
 
-async function startBooting(): Promise<void> {
+export async function startBooting(): Promise<void> {
   await bootstrap();
   app.use(logger.requestLogger);
   registerRoutes(path.join(__dirname, "routes"));
@@ -28,11 +28,4 @@ async function registerRoutes(directory: string): Promise<void> {
   }
 }
 
-startBooting()
-  .then(() => {
-    logger.logInfo("bootstrap initiated successfully ✅");
-  })
-  .catch((error) => {
-    logger.logError("Error during bootstrap:" + String(error));
-  });
-export default app;
+export default app; startBooting
