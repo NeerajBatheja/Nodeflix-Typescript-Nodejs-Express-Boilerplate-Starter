@@ -23,6 +23,7 @@
     "config": "^3.3.9",
     "db-migrate": "^0.11.14",
     "db-migrate-pg": "^1.5.2",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "inversify": "^6.0.2",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@types/amqplib": "^0.10.3",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.20",
     "@types/jest": "^29.5.7",
     "@types/node": "^20.8.9",
