@@ -62,6 +62,11 @@ class DependencyLocator {
     const ValidatorClass = await import(path.join(__dirname, 'consumers', dependencyName))
     return this.createDependency<typeof ValidatorClass>(dependencyName)
   }
+  
+  async getUtility (dependencyName: string): Promise<any> {
+    const ValidatorClass = await import(path.join(__dirname, 'utility', dependencyName))
+    return this.createDependency<typeof ValidatorClass>(dependencyName)
+  }
 }
 
 export default DependencyLocator
